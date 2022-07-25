@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red--color: #d90429;
+}
+
+/*card ------------------------------------------*/
+.card {
+  width: 180px;
+  height: 130px;
+  margin: 0 auto;
+  padding: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  backdrop-filter: blur(1000px);
+  background-color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #d90429;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card h1 {
+  text-shadow: 2px 2px gray;
+
+}
+
+.card img {
+  height: 60%;
+  width: 50%;
+  animation-name: grow;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: normal;
+  color: black;
+}
+
+.card button {
+  background-color: #d90429;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+
+}
+
+.card button:hover {
+  background-color: white;
+  color: #d90429;
+  border: 1px solid #d90429;
+  border-radius: 10px;
+}
+
+
+/*log in--------------------------------------*/
+.logIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: yellow;
+  -webkit-text-stroke: 0.7px blue;
+}
+
+.logIn form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logIn>img {
+  height: 60vh;
+}
+
+.logIn input {
+  border: transparent;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px gray;
+  margin: 0px 0px 10px 10px;
+  width: 100px;
+  height: 20px;
+}
+
+.logIn>form>button {
+  background-color: chartreuse;
+  color: white;
+  -webkit-text-stroke: 0px white;
+  border: transparent;
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+}
+
+.logIn button:hover {
+  color: chartreuse;
+  background-color: white;
+  border: 1px solid chartreuse;
+  cursor: pointer;
+}
+
+.pokeDex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pokeDex>.buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 15px;
+}
+.pokeDex>.buttons>button{
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  background-color: #d90429;
+}
+.pokeDex>.buttons>button:focus{
+  background-color: white;
+  border: 1px solid #d90429;
+  color: #d90429;
+}
+.pokeDex>.buttons>button:hover{
+  background-color: white;
+  border: 1px solid #d90429;
+  color: #d90429;
+  cursor: pointer;
+}
+
+.pokeDex>.pokemons {
+  margin-left: 6vw;
+  margin-right: 6vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Pokedex-------------------------------*/
+.pokeDex {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--red--color);
+}
+
+.pokeDex>.welcome>h1 {
+  margin: 20px 0px 20px 0px;
+  text-shadow: 2px 2px gray;
+
+}
+
+.pokeDex>.filter {
+  margin: 10px 0px 20px 0px;
+
+}
+
+.pokeDex>.filter select {
+  background-color: var(--red--color);
+  color: white;
+  -webkit-text-stroke: 0px white;
+  border: transparent;
+  border-radius: 0px 20px 20px 0px;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 2px 2px 10px gray;
+}
+
+.pokeDex>.filter input {
+  border: transparent;
+  border-radius: 20px 0px 0px 20px;
+  box-shadow: 2px 2px 10px gray;
+  margin: 0px 0px 10px 10px;
+  width: 200px;
+  height: 25px;
+}
+
+/*Details --------------------------------------------*/
+.details {
+  position: relative;
+  z-index: -10;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80vh 100px auto;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  
+  font-weight: bold;
+  color: #d90429;
+}
+.main ~ div {
+  position: relative;
+  z-index: 20;
+}
+
+.details>.main {
+  grid-column: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  border-radius: 30px 30px 0 0;
+}
+
+.details>.main>img {
+  width: 35%;
+  height: 60%;
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes grow {
+  0%{transform: scale(1);}
+  100%{transform: scale(1.4);}
+}
+
+.details>.main>ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.details>.movements {
+  
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+  backdrop-filter: brightness(50%);
+  width: 80%;
+  margin: auto;
+  
+}
+
+.details>.movements>ul {
+  list-style-type: none;
+  margin-left: 30px;
+}
+
+.details>.type {
+  grid-column: 1 /2;
+  grid-row: 2 /3;
+ 
+  background-color: white;
+  width: 70%;
+  height: 80%;
+  margin-left: 20%;
+}
+
+.details>.type>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin-top: 5%;
+}
+
+.details>.type li {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.details>.abilities {
+  grid-column: 2 /3;
+  grid-row: 2 /3;
+
+  background-color: white;
+  width: 70%;
+  height: 80%;
+  margin-left: 10%;
+}
+
+.details>.abilities>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin-top: 5%;
+}
+
+.details>.abilities li {
+ border-radius: 5px;
+ margin: 5px;
+ box-shadow: 1px 1px 4px gray;
+}
+
+.details>.stateBase {
+  grid-column: 1 / 3;
+  grid-row: 3 /4;
+
+  background-color: white;
+  width: 80%;
+  height: calc(16px*7);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0 0 20px 20px;
+}
+
+.details>.stateBase>ul {
+  list-style-type: none;
+  
+}
+#particles-js{
+  background-color: #d90429;
+  width: 300px;
+  height: 300px;
+}
+
+/*pokeball --------*/
+.pokeball{
+  position: absolute;
+  top: 4%;
+  right: 0;
+  z-index: 10;
+  opacity: 0.6;
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.down{
+  left: 0;
+}
+@keyframes rotate {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
