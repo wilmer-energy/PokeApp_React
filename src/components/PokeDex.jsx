@@ -86,7 +86,7 @@ const PokeDex = () => {
             <div className='buttons'>
             {buttons.map((e)=>{
                 if(e!==0){
-                    return (<button onClick={()=>{pagination(e)}}>{e}</button>)
+                    return (<button onClick={()=>{pagination(e)}} key={e}>{e}</button>)
                 }
                 
             })}

@@ -213,7 +213,6 @@ span {
   grid-template-rows: 80vh 100px auto;
   font-family: 'Orbitron', sans-serif;
   font-size: 12px;
-  
   font-weight: bold;
   color: #d90429;
 }
@@ -296,7 +295,6 @@ span {
 .details>.abilities {
   grid-column: 2 /3;
   grid-row: 2 /3;
-
   background-color: white;
   width: 70%;
   height: 80%;
@@ -357,4 +355,21 @@ span {
 @keyframes rotate {
   0%{transform: rotate(0deg);}
   100%{transform: rotate(360deg);}
+}
+
+@media (max-width: 600px) {
+  .details{
+    grid-template-rows: 40vh 30vh;
+  }
+  .details>img{
+    width: 120px;
+  }
+  .details>.abilities>ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .details>.type>ul{
+    display: flex;
+    flex-direction: column;
+  }
 }
